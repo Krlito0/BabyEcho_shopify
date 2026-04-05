@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@plugin "@tailwindcss/container-queries";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-rose-poudre: #F8F1EC;
+  --color-vert-sauge: #E2F0EB;
+  --color-peche: #FFBE98;
+  --color-framboise: #D1657C;
+  --color-chocolat: #4F362C;
+
+  --font-title: 'Quicksand', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-signature: 'Just Another Hand', sans-serif;
+
+  --color-background: #F8F1EC;
+  --color-foreground: #4F362C;
+}
+
+@layer base {
+
+  html {
+    background-color: var(--color-rose-poudre);
+    border-color: var(--color-gray-200, currentColor);
+    color: var(--color-chocolat);
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-title);
+    color: var(--color-chocolat);
+  }
+
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: light;
+  }
+}
+
+@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+  img[loading="lazy"] {
+    clip-path: inset(0.6px);
+  }
+}
+
+a,
+input,
+button {
+  @apply focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-[#D1657C];
+}
+
+@keyframes marquee-left {
+  0% { transform: translateX(0);}
+  100% { transform: translateX(-50%);}
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50);}
+  100% { transform: translateX(0%);}
+}
+
+.animat-marquee-left {
+  animation: marquee-left 20s linear infinite;
+}
+
+.animat-marquee-right {
+  animation: marquee-right 20s linear infinite;
+}

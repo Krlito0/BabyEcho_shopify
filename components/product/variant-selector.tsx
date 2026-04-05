@@ -1,0 +1,105 @@
+"use client";
+
+import clsx from "clsx";
+import { ProductOption, ProductVariant } from "lib/shopify/types";
+import { useRouter, useSearchParams } from "next/navigation";
+
+type Combination = {
+  id: string;
+  availableForSale: boolean;
+  [key: string]: string | boolean;
+};
+
+export function VariantSelector({
+  options,
+  variants,
+}: {
+  options: ProductOption[];
+  variants: ProductVariant[];
+}) {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const hasNoOptionsOrJustOneOption =
+    !options.length ||
+    (options.length === 1 && options[0]?.values.length === 1);
+
+  if (hasNoOptionsOrJustOneOption) {
+    return null;
+  }
+
+  const combinations: Combination[] = variants.map((variant) => ({
+    id: variant.id,
+    availableForSale: variant.availableForSale,
+    ...variant.selectedOptions.reduce(
+      (accumulator, option) => ({
+        ...accumulator,
+        [option.name.toLowerCase()]: option.value,
+      }),
+      {},
+    ),
+  }));
+
+  const updateOption = (name: string, value: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    params.set(name, value);
+    router.replace(`?${params.toString()}`, { scroll: false });
+  };
+
+  return options.map((option) => (
+    <form key={option.id}>
+      <dl className="mb-8">
+        <dt className="mb-4 text-sm uppercase tracking-wide">{option.name}</dt>
+        <dd className="flex flex-wrap gap-3">
+          {option.values.map((value) => {
+            const optionNameLowerCase = option.name.toLowerCase();
+
+            // Base option params on current searchParams so we can preserve any other param state.
+            const optionParams: Record<string, string> = {};
+            searchParams.forEach((v, k) => (optionParams[k] = v));
+            optionParams[optionNameLowerCase] = value;
+
+            // Filter out invalid options and check if the option combination is available for sale.
+            const filtered = Object.entries(optionParams).filter(
+              ([key, value]) =>
+                options.find(
+                  (option) =>
+                    option.name.toLowerCase() === key &&
+                    option.values.includes(value),
+                ),
+            );
+            const isAvailableForSale = combinations.find((combination) =>
+              filtered.every(
+                ([key, value]) =>
+                  combination[key] === value && combination.availableForSale,
+              ),
+            );
+
+            // The option is active if it's in the selected options.
+            const isActive = searchParams.get(optionNameLowerCase) === value;
+
+            return (
+              <button
+                formAction={() => updateOption(optionNameLowerCase, value)}
+                key={value}
+                aria-disabled={!isAvailableForSale}
+                disabled={!isAvailableForSale}
+                title={`${option.name} ${value}${!isAvailableForSale ? " (Out of Stock)" : ""}`}
+                className={clsx(
+                  "flex min-w-[48px] items-center justify-center rounded-full border px-4 py-2 text-sm font-semibold transition-all duration-300",
+                  {
+                    "bg-[#D1657] text-white border-[#D1657C]": isActive,
+                    "bg-[#F8F1EC] text-[#4F362C] border-[#4F362C]/30 hover:border-[#D1657C] hover:text-[#D1657C]":!isActive && isAvailableForSale,
+                    "relative z-10 cursor-not-allowed bg-[#F8F1EC] text-[#4F362C]/30 border-[#4F362C]/10":
+                      !isAvailableForSale,
+                  },
+                )}
+              >
+                {value}
+              </button>
+            );
+          })}
+        </dd>
+      </dl>
+    </form>
+  ));
+}

@@ -1,0 +1,65 @@
+import HomeAbout from "components/home-about";
+import HomeComparison from "components/home-comparison";
+import HomeFaq from "components/home-faq";
+import HomeHeroPhoto from "components/home-hero-photo";
+import HomeMarquee from "components/home-marquee";
+import HomeProductDetail from "components/home-product-detail";
+import HomeReviews from "components/home-reviews";
+import HomeValues from "components/home-values";
+import Footer from "components/layout/footer";
+import WaveDivider from "components/wave-divider";
+
+export const metadata = {
+  description:
+    "L'organisateur de grossess pensé pour accompagner chaque femme dans son parcours maternel",
+  openGraph: {
+    type: "website",
+  },
+};
+
+export default function HomePage() {
+  return (
+    <>
+      {/* Hero Section*/}
+      <section className="bg-[#F8F1EC] px-6 py-20 text-center flex flex-col items-center gap-6">
+        <p 
+        className="text-[#D1657C] text-2xl"
+        style={{ fontFamily: `var(--font-signature)`}}
+        >
+          Bienvenue chez Baby Echo
+        </p>
+        <h1
+        className="text-4xl md:text-6xl font-bold text-[#4F362C] leading-tight max-w-3xl"
+        style={{ fontFamily: `var(--font-title)`}}
+        >
+          L'organisateur de grossesse qui vous accompagne vraiment
+        </h1>
+        <a
+        href="/product/le-1er-classeur-de-suivi-de-grossesse"
+        className="mt-4 bg-[#D1657C] text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-[#4F362C] transition-colors duration-300"
+        style={{ fontFamily: `var(--font-body)`}}
+        >
+          Découvrir l'organisateur
+        </a>
+      </section>
+      <WaveDivider topColor="#F8F1EC" bottomColor="#E2F0EB"/>
+      <HomeValues />
+      <WaveDivider topColor="#E2F0EB" bottomColor="#F8F1EC"/>
+      <HomeProductDetail />
+      <WaveDivider topColor="#F8F1EC" bottomColor="#E2F0EB"/>
+      <HomeComparison />
+      <WaveDivider topColor="#E2F0EB" bottomColor="#F8F1EC"/>
+      <HomeFaq />
+      <WaveDivider topColor="#F8F1EC" bottomColor="#D1657C"/>
+      <HomeMarquee />
+      <WaveDivider topColor="#D1657C" bottomColor="#E2F0EB"/>
+      <HomeAbout />
+      <WaveDivider topColor="#E2F0EB" bottomColor="#F8F1EC"/>
+      <HomeReviews />
+      <WaveDivider topColor="#F8F1EC" bottomColor="#F8F1EC"/>
+      <HomeHeroPhoto />
+      <WaveDivider topColor="#4F362C" bottomColor="#4F362C"/>
+      <Footer />
+    </>
+  );
+}
