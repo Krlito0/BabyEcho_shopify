@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HomeProductDetail() {
     return (
         <section className="bg-[#F8F1EC] py-20 px-6 ">
-            <div className="mx-auto max-w-6xl flex flex-cols md:flex-row items-center gap-12">
+            <div className="mx-auto max-w-6xl flex flex-col md:flex-row items-center gap-12">
 
                 {/* Hero Section*/}
                 <motion.div
@@ -65,14 +65,14 @@ export default function HomeProductDetail() {
                             className="flex items-center gap-3 text-[#4F362C]"
                             style={{ fontFamily: `var(--font-body)`}}
                             >
-                                <span className="w-5 h-5 rounded-full bg-[#D1657C] flex items-center justify-center text-white text-xs">✔</span>
+                                <span className="w-5 h-5 rounded-full bg-[#D1657C] flex items-center justify-center text-white text-xs flex-shrink-0">✔</span>
                                 {point}
                             </li>
                         ))}
                     </ul>
 
                     <a href="/product/le-1er-classeur-de-suivi-de-grossesse"
-                    className="mt-4 self-start bg-[#D1657C] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4F362C] transition-colors duration-300"
+                    className="mt-4 self-start bg-[#D1657C] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4F362C] transition-colors duration-300 text-center w-full md:w-auto flex items-center justify-center"
                     style={{ fontFamily: `var(--font-body)`}}>
                         Découvrir l'organisateur 
                     </a>
