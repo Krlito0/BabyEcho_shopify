@@ -7,7 +7,7 @@ export default function HomeNewsletter() {
     const [sent, setSent] = useState(false);
 
     return (
-        <section className="bg-[#4F362C] py-20 px-6">
+        <section id="newsletter" className="bg-[#4F362C] py-20 px-6">
             <div className="mx-auto max-w-2xl text-center flex flex-col items-center gap-6">
                 <p className="text-[#FFBE98] text-2xl"
                     style={{ fontFamily: `var(--font-signature)`, fontSize: "1.8rem" }}>

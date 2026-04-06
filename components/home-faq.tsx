@@ -42,8 +42,8 @@ export default function HomeFaq() {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
     return (
-        <section className="bg-[#F8F1EC] py-20 px-6">
-            <div className="mx-auto max w-3xl flex flex-col gap-10">
+        <section id="faq" className="bg-[#F8F1EC] py-20 px-6">
+            <div className="mx-auto max-w-3xl flex flex-col gap-10 px-4">
 
                 <motion.div
                 className="text-center flex flex-col gap-3"
