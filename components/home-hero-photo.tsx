@@ -21,7 +21,7 @@ export default function HomeHeroPhoto() {
             {/* Texte centré */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 gap-6">
                 <motion.p
-                className="text-[#FFBE98] text-2xl"
+                className="text-[#D1657C] text-2xl"
                 style={{ fontFamily: "var(--font-signature", fontSize: "1.8rem"}}
                 initial= {{opacity: 0, y: 20}}
                 whileInView={{opacity: 1, y: 0}}
@@ -38,11 +38,11 @@ export default function HomeHeroPhoto() {
                 transition={{ duration: 0.7, delay: 0.2 }}
                 viewport={{ once: true}}
                 >
-                    Votre grossesse mérite d'être vécue sereinement, sans charge mentale.
+                    Vous méritez le meilleur pour votre grossesse.
                 </motion.h2>
                 <motion.a
                 href="/product/le-1er-classeur-de-suivi-de-grossesse"
-                className="mt-4 bg-[#D1657] text-white px-10 py-4 rounded-full font-semibold text-base hover:bg-[#FFBE98] hover:text-[#4F362C] transition-all duration-300"
+                className="mt-4 bg-[#D1657] border border-[#FFBE98] text-[#FFBE98] px-10 py-4 rounded-full font-semibold text-base hover:bg-[#FFBE98] hover:text-[#4F362C] transition-all duration-300"
                 style={{ fontFamily: "var(--font-body"}}
                 initial= {{opacity: 0, y: 20}}
                 whileInView={{opacity: 1, y: 0}}

@@ -9,7 +9,7 @@ const { SITE_NAME } = process.env;
 export async function Navbar() {
   const menu = [
     { title: "Accueil", path: "/"},
-    { title: "Nos produits", path: "/product/le-1er-classeur-de-suivi-de-grossesse"},
+    { title: "BabyDoc", path: "/product/le-1er-classeur-de-suivi-de-grossesse"},
     { title: "Mon histoire", path: "#about"},
     { title: "FAQ", path: "#faq"},
     { title: "Contactez-nous", path: "#newsletter"}

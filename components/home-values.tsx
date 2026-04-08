@@ -1,24 +1,24 @@
 export default function HomeValues() {
     const values = [
         {
+      emoji: "👩‍⚕️",
+      title: "Expertise",
+      description: "Créé par une professionnelle de la maternité",
+    },
+    {
       emoji: "📋",
       title: "Organisation",
-      description: "Tout ce dont vous avez besoin pour suivre votre grossesse semaine par semaine.",
+      description: "Rangez et retrouvez facilement tout vos documents de grossesse.",
     },
     {
       emoji: "🤍",
-      title: "Bienveillance",
-      description: "Un espace doux et rassurant pour vivre votre grossesse sereinement.",
+      title: "Souvenir",
+      description: "Gardez une trace unique de votre grossesse: moments, émotions, souvenirs... à conserver pour toujours.",
     },
     {
-      emoji: "💪",
-      title: "Empowerment",
-      description: "Prenez le contrôle de votre parcours maternel avec confiance.",
-    },
-    {
-      emoji: "👩‍⚕️",
-      title: "Expertise",
-      description: "Conçu avec des professionnels de santé pour vous accompagner au mieux.",
+      emoji: "✨",
+      title: "Prémium",
+      description: "Un classeur haut de gamme, conçu pour durer dans le temps.",
     },
     ];
 

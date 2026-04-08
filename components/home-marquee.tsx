@@ -1,16 +1,10 @@
 "use client";
 
 const items = [
-  "🤍 Bienveillance",
-  "📋 Organisation",
-  "💪 Empowerment",
-  "👩‍⚕️ Expertise",
-  "🌸 Douceur maternelle",
-  "✨ Fait en France",
-  "📅 Suivi semaine par semaine",
-  "🏥 Rendez-vous médicaux",
-  "💆‍♀️ Zéro charge mentale",
-  "🌿 Conçu avec des pros de santé",
+  "🤰 Validé par les futures mamans",
+  "🌿 Conçu par une pro de la maternité",
+  "💆‍♀️ Simplifié votre grossesse dés aujourd'hui",
+  "⚠️ stock limité"
 ];
 
 const text = items.join("    .    ");

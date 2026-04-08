@@ -55,14 +55,8 @@ export default function HomeFaq() {
                     <p
                         className="text-[#D1657C] text-xl"
                         style={{ fontFamily: `var(--font-signature)`, fontSize: "1.5rem"}}>
-                            Vous avez des question ?
+                            On répond à vos questions
                     </p>
-                    <h2
-                    className="text-3xl md:text-4xl font-bold text-[#4F362C]"
-                    style={{ fontFamily: `var(--font-title)`}}
-                    >
-                            Un classeur bien pensé pour vivre une grossesse sereine
-                    </h2>
                 </motion.div>
 
                 <div className="flex flex-col gap-3">

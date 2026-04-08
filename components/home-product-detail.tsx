@@ -37,28 +37,22 @@ export default function HomeProductDetail() {
                         className="text-[#D1657C] text-xl"
                         style={{ fontFamily: `var(--font-signature)`, fontSize: "1.5rem"}}
                         >
-                            Le geste maternel qui vous veut du bien
+                            Le classeur qui diminue vraiment votre charge mentale
                     </p>
                     <h2
                     className="text-3xl md:text-4xl font-bold text-[#4F362C] leading-tight"
                     style={{ fontFamily: `var(--font-title)`}}
                     >
-                            Un organisateur pensé pour chaque étape de votre grossesse
+                            Un outil indispensable pour une grossesse sereine
                     </h2>
-                    <p
-                        className="text-[#4F362C] text-base leading-relaxed"
-                        style={{ fontFamily: `var(--font-body)`}}
-                        >
-                            Baby Echo n'est pas un simplecarnet. C'est un compagnon de route pour vous aider à suivre chaque semaine, chaque rendez-vous, chaque émotion de votre parcours maternel.
-                    </p>
 
                     {/* Point clés*/}
                     <ul className="flex flex-col gap-3">
                         {[
-                            "Suivi semaine par semaine",
-                            "Espace pour vos rendez-vous médicaux",
-                            "Pages dédiées à vos émotions",
-                            "Conçu avec des professionnels de santé"
+                            "Ne perdez plus jamais un document",
+                            "Un seul classeur pour tout gérer",
+                            "Des guides concrets pour vous accompagner",
+                            "Un souvenir que vous garderez toute votre vie"
                         ].map((point) => (
                             <li 
                             key={point}
@@ -74,7 +68,7 @@ export default function HomeProductDetail() {
                     <a href="/product/le-1er-classeur-de-suivi-de-grossesse"
                     className="mt-4 self-start bg-[#D1657C] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4F362C] transition-colors duration-300 text-center w-full md:w-auto flex items-center justify-center"
                     style={{ fontFamily: `var(--font-body)`}}>
-                        Découvrir l'organisateur 
+                        Découvrir mon BabyDoc 
                     </a>
                 </motion.div>
             </div>

@@ -48,7 +48,7 @@ export default function HomeAbout() {
                     <a href="/search"
                     className="self-center md:self-start mt-2 border-2 border-[#D1657C] text-[#D1657C] px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#D1657C] hover:text-white transition-all duration-300"
                     style={{ fontFamily: `var(--font-title)`}}>
-                        Découvrir l'organisateur 
+                        Découvrir son histoire 
                     </a>
                 </motion.div>
 

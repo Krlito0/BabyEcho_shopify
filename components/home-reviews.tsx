@@ -43,7 +43,7 @@ export default function HomeReviews() {
           className="text-3xl md:text-4xl font-bold text-[#4F362C]"
           style={{ fontFamily: "var(--font-title)" }}
         >
-          Nos clientes adorent Baby Echo 🤍
+          Nos clientes adorent mon BabyDoc 🤍
         </h2>
       </div>
 

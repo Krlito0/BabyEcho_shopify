@@ -22,24 +22,30 @@ export default function HomePage() {
     <>
       {/* Hero Section*/}
       <section className="bg-[#F8F1EC] px-6 py-20 text-center flex flex-col items-center gap-6">
-        <p 
-        className="text-[#D1657C] text-2xl"
-        style={{ fontFamily: `var(--font-signature)`}}
-        >
-          Bienvenue chez Baby Echo
-        </p>
         <h1
         className="text-4xl md:text-6xl font-bold text-[#4F362C] leading-tight max-w-3xl"
         style={{ fontFamily: `var(--font-title)`}}
         >
-          L'organisateur de grossesse qui vous accompagne vraiment
+          Mon BabyDoc: Le 1er classeur de suivi de grossesse et de souvenirs
         </h1>
+        <p
+        className="text-[#D1657C] text-2xl"
+        style={{ fontFamily: `var(--font-signature)`}}
+        >
+          2 en 1 unique: organise votre suivi et conserve chaque souvenir prévieux
+        </p>
+        <p
+        className="text-[#D1657C] text-xl font-bold"
+        style={{ fontFamily: `var(--font-signature)`}}
+        >
+          Un Repère  -  un Soutien  -  Un Souvenir
+        </p>
         <a
         href="/product/le-1er-classeur-de-suivi-de-grossesse"
         className="mt-4 bg-[#D1657C] text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-[#4F362C] transition-colors duration-300"
         style={{ fontFamily: `var(--font-body)`}}
         >
-          Découvrir l'organisateur
+          Découvrir mon BabyDoc
         </a>
       </section>
       <WaveDivider topColor="#F8F1EC" bottomColor="#E2F0EB"/>
