@@ -68,9 +68,9 @@ export default function HomeComparison() {
                                 <tr>
                                     <th className=" text-white py-3 px-3 text-left w-1/3"
                                         style={{ fontFamily: `var(--font-title)`}}></th>
-                                    <th className="bg-[#D1657C] text-white py-3 px-3 text-center w-1/3"
+                                    <th className="bg-[#D1657C] text-white py-3 px-3 text-center w-1/3 shadow-lg"
                                         style={{ fontFamily: `var(--font-title)`}}>
-                                        Avec le classeur
+                                        ✨ Avec le classeur
                                     </th>
                                     <th className="bg-[#4F362C] text-white py-3 px-3 text-center w-1/3"
                                     style={{ fontFamily: `var(--font-title)`}}>
@@ -85,7 +85,7 @@ export default function HomeComparison() {
                                             style={{ fontFamily: `var(--font-body)`}}>
                                             {row.feature}
                                         </td>
-                                        <td className= "py-3 px-3 text-center text-[#D1657C]"
+                                        <td className= "py-3 px-3 text-center text-[#D1657C] font-semibold bg-[#D1657C]/5 border-x-2 border-[#D1657C]/20"
                                             style={{ fontFamily: `var(--font-body)`}}>
                                             {row.with}
                                         </td>

@@ -26,13 +26,13 @@ export default function HomePage() {
         className="text-4xl md:text-6xl font-bold text-[#4F362C] leading-tight max-w-3xl"
         style={{ fontFamily: `var(--font-title)`}}
         >
-          Mon BabyDoc: Le 1er classeur de suivi de grossesse et de souvenirs
+          Imagine une grossesse organisée, sereine... et inoubliable.
         </h1>
         <p
         className="text-[#D1657C] text-2xl"
         style={{ fontFamily: `var(--font-signature)`}}
         >
-          2 en 1 unique: organise votre suivi et conserve chaque souvenir prévieux
+          Mon BabyDoc : le classeur qui organise ta grossesse... et garde chaque souvenir pour toujours
         </p>
         <p
         className="text-[#D1657C] text-xl font-bold"
@@ -45,7 +45,7 @@ export default function HomePage() {
         className="mt-4 bg-[#D1657C] text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-[#4F362C] transition-colors duration-300"
         style={{ fontFamily: `var(--font-body)`}}
         >
-          Découvrir mon BabyDoc
+          Je découvre mon BabyDoc
         </a>
       </section>
       <WaveDivider topColor="#F8F1EC" bottomColor="#E2F0EB"/>
