@@ -40,6 +40,7 @@ function ThreeItemGridItem({
             title: item.title as string,
             amount: item.priceRange.maxVariantPrice.amount,
             currencyCode: item.priceRange.maxVariantPrice.currencyCode,
+            compareAtAmount: item.variants[0]?.compareAtPrice?.amount ?? "59.99",
           }}
         />
       </Link>

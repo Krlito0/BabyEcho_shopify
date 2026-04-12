@@ -34,12 +34,19 @@ export default function HomePage() {
         >
           Mon BabyDoc : le classeur qui organise ta grossesse... et garde chaque souvenir pour toujours
         </p>
-        <p
-        className="text-[#D1657C] text-xl font-bold"
-        style={{ fontFamily: `var(--font-signature)`}}
-        >
-          Un Repère  -  un Soutien  -  Un Souvenir
-        </p>
+        <div className="flex items-center gap-4 md:gap-8 mt-2">
+          {["Un Repère", "Un Soutien", "Un Souvenir"].map((mot, i) => (
+            <div key={mot} className="flex items-center gap-4 md:gap-8">
+              <span className="text-lg md:text-xl font-bold text-[#4F362C] uppercase tracking-widest"
+                style={{ fontFamily: "var(--font-title)"}}>
+                  {mot}
+                </span>
+                {i < 2 && (
+                  <span className="text-[#D1657C] text-2xl">✦</span>
+                )}
+            </div>
+          ))}
+        </div>
         <a
         href="/product/le-1er-classeur-de-suivi-de-grossesse"
         className="mt-4 bg-[#D1657C] text-white px-8 py-4 rounded-full text-base font-semibold hover:bg-[#4F362C] transition-colors duration-300"

@@ -4,11 +4,20 @@ import { AddToCart } from "components/cart/add-to-cart";
 import Price from "components/price";
 import Prose from "components/prose";
 import { Product } from "lib/shopify/types";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { VariantSelector } from "./variant-selector";
 
 export function ProductDescription({ product }: { product: Product }) {
-  const [openSection, setOpenSection] = useState<string | null>("pourquoi"); 
+  const [openSection, setOpenSection] = useState<string | null>("pourquoi");
+  const searchParams = useSearchParams();
+
+  const selectedVariant = product.variants.find((variant) =>
+  variant.selectedOptions.every(
+    (option) => searchParams?.get(option.name.toLowerCase()) === option.value
+  )
+) || product.variants[0];
+
   return (
     <>
     {/* Titre */}
@@ -24,12 +33,9 @@ export function ProductDescription({ product }: { product: Product }) {
             currencyCode={product.priceRange.minVariantPrice.currencyCode}
             />
           </div>
-          {(product as any).compareAtPriceRange?.minVariantPrice?.amount && (
+          {selectedVariant?.compareAtPrice?.amount && (
             <span className="text-sm text-[#4F362C]/50 line-through">
-              <Price
-              amount={(product as any).compareAtPriceRange.minVariantPrice.amount}
-              currencyCode={(product as any).compareAtPriceRange.minVariantPrice.currencyCode}
-              />
+              {parseFloat(selectedVariant.compareAtPrice.amount).toFixed(2)}€
             </span>
           )}
         </div>
