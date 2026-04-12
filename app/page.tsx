@@ -34,15 +34,15 @@ export default function HomePage() {
         >
           Mon BabyDoc : le classeur qui organise ta grossesse... et garde chaque souvenir pour toujours
         </p>
-        <div className="flex items-center gap-4 md:gap-8 mt-2">
+        <div className="flex flex-col md:flex-row items-center gap-3 md:gap-8 mt-2">
           {["Un Repère", "Un Soutien", "Un Souvenir"].map((mot, i) => (
-            <div key={mot} className="flex items-center gap-4 md:gap-8">
-              <span className="text-lg md:text-xl font-bold text-[#4F362C] uppercase tracking-widest"
+            <div key={mot} className="flex items-center gap-3 md:gap-8">
+              <span className="text-base md:text-xl font-bold text-[#4F362C] uppercase tracking-widest"
                 style={{ fontFamily: "var(--font-title)"}}>
                   {mot}
                 </span>
                 {i < 2 && (
-                  <span className="text-[#D1657C] text-2xl">✦</span>
+                  <span className="text-[#D1657C] text-2xl hidden md:block">✦</span>
                 )}
             </div>
           ))}

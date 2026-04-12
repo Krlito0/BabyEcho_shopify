@@ -59,7 +59,7 @@ export default function HomeProductDetail() {
                             className="flex items-center gap-3 text-[#4F362C]"
                             style={{ fontFamily: `var(--font-body)`}}
                             >
-                                <span className="w-5 h-5 rounded-full bg-[#D1657C] flex items-center justify-center text-white text-xs flex-shrink-0">✔</span>
+                                <span className="w-5 h-5 rounded-full bg-[#D1657C] flex items-center justify-center text-white text-xs flex-shrink-0 min-w-[20px]">✔</span>
                                 {point}
                             </li>
                         ))}
