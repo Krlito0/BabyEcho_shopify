@@ -25,7 +25,11 @@ export function ProductDescription({ product }: { product: Product }) {
         <h1 className="mb-2 text-3xl font-bold text-[#4F362C]"
         style={{ fontFamily: "var(--font-title)" }}>
           {product.title}
-          </h1>
+        </h1>
+        <p className="text-[#4F362C]/70 text-base"
+          style={{ fontFamily: `var(--font-body)` }}>
+            Le 1er classeur 2-en-1 qui organise ta grossesse et te garde des souvenirs à vie
+        </p>
         <div className="flex items-center gap-3 mt-2">
           <div className="rounded-full bg-[#D1657C] px-4 py-2 text-sm text-white font-bold">
             <Price
@@ -66,6 +70,12 @@ export function ProductDescription({ product }: { product: Product }) {
         </div>   
       ) : null}
 
+      {/* Bouton panier */}
+      <div className="py-6">
+        <AddToCart product={product} />
+      </div>
+      
+
       {/* Mode de Paiement */}
       <div className="mb-4 flex flex-wrap gap-2 items-center">
         <span className="text-xs text-[#4F362C]/50"
@@ -81,8 +91,6 @@ export function ProductDescription({ product }: { product: Product }) {
         ))}
       </div>
 
-      {/* Bouton panier */}
-      <AddToCart product={product} />
     </>
   );
 }

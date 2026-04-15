@@ -6,7 +6,7 @@ import Image from "next/image";
 export default function HomeAbout() {
     return (
         <section id="about" className="bg-[#E2F0EB] py-20 overflow-hidden">
-            <div className="flex flex-col md:flex-row items-center justify-center gap-12">
+            <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6 justify-center">
 
                 {/* Image*/}
                 <motion.div
@@ -18,8 +18,8 @@ export default function HomeAbout() {
                     <Image
                     src="https://cdn.shopify.com/s/files/1/0903/4776/6139/files/StoryInstagramMerciModerneSimpleMinimalisteMarron.png?v=1775408562"
                     alt="La fondatrice de BabyEcho"
-                    width={600}
-                    height={600} />
+                    width={300}
+                    height={300} />
                 </motion.div>
                 
                 {/* Texte*/}
@@ -48,7 +48,7 @@ export default function HomeAbout() {
                     <a href="/search"
                     className="self-center md:self-start mt-2 border-2 border-[#D1657C] text-[#D1657C] px-8 py-3 rounded-full font-bold text-sm uppercase tracking-widest hover:bg-[#D1657C] hover:text-white transition-all duration-300"
                     style={{ fontFamily: `var(--font-title)`}}>
-                        Découvrir son histoire 
+                        Découvrir mon histoire 
                     </a>
                 </motion.div>
 

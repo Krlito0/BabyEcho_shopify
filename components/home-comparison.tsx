@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 
 export default function HomeComparison() {
     const rows = [
-        {feature: "Démarches administratives", with: "Marche à suivre donnée", without: "Confuses, oubliées ou faites en retard"},
-        {feature: "Papiers de grossesse", with: "rangé et trié", without: "Eparpillé"},
-        {feature: "Organisation globale", with: "Structurée et fluide", without: "Désorganisée"},
-        {feature: "Informations", with: "Fiable et simplifiées", without: "Parfois peu fiable et anxiogènes"},
-        {feature: "Gestion des urgences", with: "Repères clairs pour agir", without: "Stress et incertitude"},
-        {feature: "Suivi de grossesse", with: "Vision claire et complète", without: "Manque de visibilité"},
-        {feature: "Charge mentale", with: "Apaisée", without: "Elevée"},
+        {feature: "Organisation", with: "Structurée et fluide", without: "Désorganisée"},
+        {feature: "Démarches & suivi", with: "Clair et guidé", without: "Confuses et oublié"},
+        {feature: "Documents de grossesse", with: "rangé et accessibles", without: "Eparpillé"},
+        {feature: "Informations", with: "Fiables et rassurantes", without: "Sources stressantes"},
+        {feature: "Urgences", with: "Repères pour agir", without: "Stress et incertitude"},
+        {feature: "Souvenirs & album de grossesse", with: "Tout conservé au même endroit", without: "Souvenirs perdus ou dispersés"},
+        {feature: "Emotions & charge mentale", with: "Esprit apaisé", without: "Charge mentale élevée"},
     ];
 
     const points = [
@@ -50,9 +50,9 @@ export default function HomeComparison() {
                         viewport={{ once: true}} 
                         >
                         <a href="/product/le-1er-classeur-de-suivi-de-grossesse"
-                        className="border-2 border-[#D1657C] text-[#D1657C] px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-[#D1657C] hover:text-white transition-all duration-300 text-center whitespace-nowrap"
-                        style={{ fontFamily: `var(--font-title)`}}>
-                            Découvrir le BabyDoc 
+                        className="mt-4 self-start bg-[#D1657C] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4F362C] transition-colors duration-300 text-center w-full md:w-auto flex items-center justify-center"
+                        style={{ fontFamily: `var(--font-body)`}}>
+                            Découvrir mon BabyDoc 
                         </a>
                     </motion.div>
 
@@ -68,7 +68,7 @@ export default function HomeComparison() {
                                 <tr>
                                     <th className=" text-white py-3 px-3 text-left w-1/3"
                                         style={{ fontFamily: `var(--font-title)`}}></th>
-                                    <th className="bg-[#D1657C] text-white py-3 px-3 text-center w-1/3 shadow-lg"
+                                    <th className="bg-[#D1657C] text-white py-3 px-3 text-center w-1/3 shadow-lg rounded-tl-2xl"
                                         style={{ fontFamily: `var(--font-title)`}}>
                                         ✨ Avec le classeur
                                     </th>
